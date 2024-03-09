@@ -1,0 +1,131 @@
+/* Overall card container */
+/* @import url(https://fonts.gstatic.com/s/titilliumweb/v17/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2); */
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    /* font-family: "Titillium Web", sans-serif; */
+  }
+  
+  /* General card styles */
+  .card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 300px; /* Base width */
+    height: 300px; /* Base height */
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  /* Responsive adjustments */
+  @media only screen and (max-width: 768px) {
+    .card {
+      width: calc(50% - 20px); /* Half-width on smaller screens */
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    .cards-container{
+      flex-wrap: wrap;
+      padding: 10px;
+    }
+    .card {
+      width: calc(100% - 20px); /* Full-width on smallest screens */
+    }
+  }
+  
+  .card-image {
+    height: 150px; /* Adjust height as needed */
+    background-size: cover;
+    background-position: center;
+  }
+  
+  .card-content {
+    /* flex-grow: 1;  */
+    padding: 10px;
+  }
+  
+  .card-title {
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  /* Buttons */
+  .buttons {
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover .buttons {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button {
+    padding: 8px;
+    margin: 5px;
+    text-decoration: none;
+    color: #000000;
+    transition: all 0.2s ease;
+    background-color: #ffffff;
+  }
+  
+  /* Card hover styles */
+  .card:hover {
+    width: 40rem;
+    transform: scale(1.0);
+    padding-left: 20px; /* Adjust padding for responsive behavior */
+  }
+  
+  
+  /* Card popup styles (remove if not needed) */
+  .card-popup {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .card:hover .card-popup {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .commontitle{
+    color: black;
+    align-items: center;
+    font-size: 2rem; 
+    /* font-weight: bold; */
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .card-title{
+    color: black;
+    font-size: 10px;
+  }
+  
+  .card-content{
+    font-size: 17px;
+  }
+  
+  .card:hover .card-image {
+    filter: blur(5px); /* Blur the background image on hover */
+    opacity: 0.8; /* Add slight opacity decrease for emphasis */
+  }

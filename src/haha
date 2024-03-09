@@ -1,0 +1,143 @@
+// import { useRef, useState } from "react";
+// import { useAuth0 } from '@auth0/auth0-react';
+// import { FaBars, FaTimes } from "react-icons/fa";
+// import "./main.css";
+// import logo from "./home.png";
+// import axios from 'axios';
+
+
+// function Navbar() {
+// 	const navRef = useRef();
+//     const [theme, setTheme] = useState("light");
+
+//   const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+//   console.log("Hello ", user);
+
+// 	const showNavbar = () => {
+// 		navRef.current.classList.toggle("responsive_nav" );
+// 	};
+
+// 	const handleLogin = async () => {
+//         try {
+//             await loginWithRedirect();
+//         } catch (error) {
+//             console.error("Login error:", error);
+//         }
+//     };
+
+//     const handleLogout = async () => {
+//         try {
+//             await logout({ returnTo: window.location.origin });
+//         } catch (error) {
+//             console.error("Logout error:", error);
+//         }
+//     };
+
+// 	const handleBackendLogin = async (username, password) => {
+//         try {
+//             await axios.post('/api/login/', { username, password });
+//             // Redirect or update UI after successful login
+//         } catch (error) {
+//             // Handle login error
+//             console.error("Backend login error:", error);
+//         }
+//     };
+
+//     const handleBackendLogout = async () => {
+//         try {
+//             await axios.post('/api/logout/');
+//             // Redirect or update UI after successful logout
+//         } catch (error) {
+//             // Handle logout error
+//             console.error("Backend logout error:", error);
+//         }
+//     };
+
+//     const toggleTheme = () => {
+//         const newTheme = theme === "light" ? "dark" : "light";
+//         document.documentElement.setAttribute("data-theme", newTheme);
+//         setTheme(newTheme);
+//       };
+
+// 	return (
+// 		<header className="bg-gray-900 text-white">
+//                 <img className="img" src={ logo } alt="Logo" width={50} />
+//                 <nav ref={navRef}>
+//                 <input type="text" placeholder="Search" className="search-bar"/>
+// 				<button href="/#">Home</button>
+// 				<button href="/#">About</button>
+// 				<button href="/#">Analysis</button>
+//                 <button href="/#">Product Comparison</button>
+// 				{ isAuthenticated ? (
+//                     <button onClick={handleLogout}>Logout</button>
+//                 ) : (
+//                     <button onClick={handleLogin}>Login</button>
+//                 )}
+//                 <button href="/#">Contact Us</button>
+// 				<button
+// 					className="nav-btn nav-close-btn"
+// 					onClick={showNavbar}>
+// 					<FaTimes />
+// 				</button>
+//                 <button onClick={toggleTheme}>
+//                 {theme === "light" ? "Dark Theme" : "Light Theme"}
+//                 </button>
+// 			</nav>
+// 			<button
+// 				className="nav-btn"
+// 				onClick={showNavbar}>
+// 				<FaBars />
+// 			</button>
+// 		</header>
+// 	);
+// }
+
+// export default Navbar;
+
+// import { useRef } from "react";
+// import { useAuth0 } from '@auth0/auth0-react';
+// import { FaBars, FaTimes } from "react-icons/fa";
+// import "./main.css";
+// // import logo from "./assets/bird_freepik.jpeg"
+
+// function Navbar() {
+// 	const navRef = useRef();
+
+//   const { user, loginWithRedirect, isAuthenticated, logout } = useAuth0();
+//   console.log("Hello ", user);
+
+// 	const showNavbar = () => {
+// 		navRef.current.classList.toggle(
+// 			"responsive_nav"
+// 		);
+// 	};
+
+// 	return (
+// 		<header className="bg-gray-900 text-white">
+// 			{/* <img className="img" src={ logo } alt="Logo" width={100} /> */}
+// 			<nav ref={navRef}>
+// 				<button href="/#">Home</button>
+// 				<button href="/#">About</button>
+// 				<button href="/#">Analysis</button>
+//                 <button href="/#">Product Comparison</button>
+//         { isAuthenticated ? (
+//           <button onClick={(e) => logout()}>Logout</button>) : (<button onClick={(e) => loginWithRedirect()}>Login</button>)
+//         }
+//         <button href="/#">Contact Us</button>
+
+// 				<button
+// 					className="nav-btn nav-close-btn"
+// 					onClick={showNavbar}>
+// 					<FaTimes />
+// 				</button>
+// 			</nav>
+// 			<button
+// 				className="nav-btn"
+// 				onClick={showNavbar}>
+// 				<FaBars />
+// 			</button>
+// 		</header>
+// 	);
+// }
+
+// export default Navbar;

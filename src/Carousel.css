@@ -1,0 +1,23 @@
+/* Carousel.css */
+@keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  .mask-image-linear-gradient {
+    mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
+  }
+  
+  .logo-list {
+    margin-left: 8rem; /* Adjust the margin as needed */
+    animation: infinite-scroll 5s linear infinite;
+  }
+  
+  .logo-list li {
+    margin-right: 8px; /* Adjust the margin between logos as needed */
+  }
+  
