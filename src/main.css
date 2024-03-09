@@ -1,4 +1,5 @@
 /* @import url(https://fonts.gstatic.com/s/titilliumweb/v17/NaPDcZTIAOhVxoMyOr9n_E7ffHjDGItzYw.woff2); */
+
 body {
 	padding: 0;
 	margin: 0;
@@ -11,6 +12,10 @@ body {
     /* -moz-osx-font-smoothing: grayscale; */
     overflow-x: hidden;
 	/* font-family: "Titillium Web", sans-serif; */
+}
+
+.search-bar{
+	color: black;
 }
 
 header {

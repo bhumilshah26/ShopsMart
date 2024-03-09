@@ -55,6 +55,81 @@
 // export default App;
 
 // Carousel.js
+// import React, { useRef, useEffect } from 'react';
+// import './Carousel.css';
+// import hairp from "./assets/hairproducts.jpg";
+// import bottle from "./assets/bottle.jpg";
+// import clothes from "./assets/clothes.jpg";
+// import food from "./assets/food.jpg";
+
+// const images = [
+//   hairp, bottle, clothes, food
+// ];
+
+// const Carousel = () => {
+//   const carouselRef = useRef(null);
+
+//   useEffect(() => {
+//     const ul = carouselRef.current;
+//     ul.insertAdjacentHTML('afterend', ul.outerHTML);
+//     ul.nextSibling.setAttribute('aria-hidden', 'true');
+//   }, []);
+
+//   return (
+//     <div className="commontitle">Best Sellers
+//     <div className="w-full inline-flex flex-nowrap overflow-hidden mask-image-linear-gradient">
+//       <ul ref={carouselRef} className="flex items-center justify-center md:justify-start logo-list">
+//         {images.map((image, index) => (
+//           <li key={index}>
+//             <img src={image} alt={`Logo ${index + 1}`} />
+//           </li>
+//         ))}
+//       </ul>
+//     </div>
+//     </div>
+//   );
+// };
+
+// export default Carousel;
+
+// Carousel.js
+// import React, { useRef, useEffect } from 'react';
+// import './Carousel.css';
+// import hairp from "./assets/hairproducts.jpg";
+// import bottle from "./assets/bottle.jpg";
+// import clothes from "./assets/clothes.jpg";
+// import food from "./assets/food.jpg";
+
+// const images = [hairp, bottle, clothes, food];
+
+// const Carousel = () => {
+//   const carouselRef = useRef(null);
+
+//   useEffect(() => {
+//     const ul = carouselRef.current;
+//     ul.insertAdjacentHTML('afterend', ul.outerHTML);
+//     ul.nextSibling.setAttribute('aria-hidden', 'true');
+//   }, []);
+
+//   return (
+//     <div className="carousel-container">
+//       <div className="commontitle">Best Sellers</div>
+//       <div className="carousel-wrapper">
+//         <ul ref={carouselRef} className="flex items-center logo-list">
+//           {images.map((image, index) => (
+//             <li key={index}>
+//               <img src={image} alt={`Logo ${index + 1}`} />
+//             </li>
+//           ))}
+//         </ul>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Carousel;
+
+
 import React, { useRef, useEffect } from 'react';
 import './Carousel.css';
 import hairp from "./assets/hairproducts.jpg";
@@ -62,9 +137,7 @@ import bottle from "./assets/bottle.jpg";
 import clothes from "./assets/clothes.jpg";
 import food from "./assets/food.jpg";
 
-const images = [
-  hairp, bottle, clothes, food
-];
+const images = [hairp, bottle, clothes, food];
 
 const Carousel = () => {
   const carouselRef = useRef(null);
@@ -76,16 +149,20 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="commontitle">Best Sellers
-    <div className="w-full inline-flex flex-nowrap overflow-hidden mask-image-linear-gradient">
-      <ul ref={carouselRef} className="flex items-center justify-center md:justify-start logo-list">
-        {images.map((image, index) => (
-          <li key={index}>
-            <img src={image} alt={`Logo ${index + 1}`} />
-          </li>
-        ))}
-      </ul>
-    </div>
+    <div className="carousel-container">
+      <div className="commontitle">Best Sellers</div>
+      <div className="carousel-wrapper">
+        <ul ref={carouselRef} className="flex items-center logo-list">
+          {images.map((image, index) => (
+            <li key={index}>
+              <div className="card">
+                <img src={image} alt={`Logo ${index + 1}`} />
+                {/* You can add additional content or styling for the card here */}
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 };

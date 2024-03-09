@@ -1,23 +1,28 @@
 /* Carousel.css */
 @keyframes infinite-scroll {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(-100%);
-    }
+  from {
+    transform: translateX(0);
   }
-  
-  .mask-image-linear-gradient {
-    mask-image: linear-gradient(to right, transparent 0, black 128px, black calc(100% - 128px), transparent 100%);
+  to {
+    transform: translateX(-50%);
   }
-  
-  .logo-list {
-    margin-left: 8rem; /* Adjust the margin as needed */
-    animation: infinite-scroll 5s linear infinite;
-  }
-  
-  .logo-list li {
-    margin-right: 8px; /* Adjust the margin between logos as needed */
-  }
-  
+}
+
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-wrapper {
+  display: flex;
+  overflow: hidden;
+}
+
+.logo-list {
+  margin-left: 8rem; 
+  animation: infinite-scroll 15s linear infinite;
+}
+
+.logo-list li {
+  margin-right: 8px; /* Adjust the margin between logos as needed */
+}
