@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "310542772984",
+    "project_id": "glitchgremlins-d00bb",
+    "storage_bucket": "glitchgremlins-d00bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:310542772984:android:68c6c1a5c008aa612b290d",
+        "android_client_info": {
+          "package_name": "com.example.gg"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8QoIDI5eiYiGacQK83wuvR2jBtBEzmHg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

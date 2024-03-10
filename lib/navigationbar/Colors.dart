@@ -1,0 +1,14 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+class Constants{
+  final Color primaryColor = const Color(0xFF57BEE1);
+  final Color secondaryColor = Colors.black.withOpacity(0.8);
+}
+
+const Color primary = Color(0xFF1FCC79);
+const Color Secondary = Color(0xFFFF6464);
+const Color mainText = Color(0xFF2E3E5C);
+const Color SecondaryText = Color(0xFF9FA5C0);
+const Color outline = Color(0xFFD0DBEA);
+const Color form = Color(0xFFF4F5F7);
