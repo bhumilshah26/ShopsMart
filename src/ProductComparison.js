@@ -76,27 +76,27 @@ const ProductComparisonPage = () => {
 
   return (
     <div className="min-h-screen flex items-center justify-center">
-      <div className=" p-8 w-800 h-500">
+      <div className="p-8 w-800 h-800">
         <h1 className="text-3xl font-bold mb-4">Product Comparison</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="border p-4">
-            <h2 className="text-xl font-semibold mb-2">{product1.name}</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 ">
+          <div className="border p-4 pt-4 pb-4 ">
+            <h2 className="text-xl font-semibold mb-2 pt-4 pb-4">{product1.name}</h2>
             <p>{product1.description}</p>
-            <p className="mt-2">Price: {product1.price}</p>
-            <p>Delivery Speed: {product1.deliverySpeed}</p>
-            <p>Sales: {product1.sales}</p>
-            <p>Reviews: {product1.reviews}</p>
+            <p className="mt-2 pt-2 pb-2">Price: {product1.price}</p>
+            <p className="mt-2 pt-2 pb-2">Delivery Speed: {product1.deliverySpeed}</p>
+            <p className="mt-2 pt-2 pb-2">Sales: {product1.sales}</p>
+            <p className="mt-2 pt-2 pb-2">Reviews: {product1.reviews}</p>
             {/* Add other product details */}
           </div>
 
           <div className="border p-4">
-            <h2 className="text-xl font-semibold mb-2">{product2.name}</h2>
-            <p>{product2.description}</p>
-            <p className="mt-2">Price: {product2.price}</p>
-            <p>Delivery Speed: {product2.deliverySpeed}</p>
-            <p>Sales: {product2.sales}</p>
-            <p>Reviews: {product2.reviews}</p>
+            <h2 className="text-xl font-semibold mb-2 pt-4 pb-4">{product2.name}</h2>
+            <p className="mt-2 pt-2 pb-2">{product2.description}</p>
+            <p className="mt-2 pt-2 pb-2">Price: {product2.price}</p>
+            <p className="mt-2 pt-2 pb-2">Delivery Speed: {product2.deliverySpeed}</p>
+            <p className="mt-2 pt-2 pb-2">Sales: {product2.sales}</p>
+            <p className="mt-2 pt-2 pb-2">Reviews: {product2.reviews}</p>
             {/* Add other product details */}
           </div>
         </div>

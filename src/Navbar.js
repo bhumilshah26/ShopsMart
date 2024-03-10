@@ -6,6 +6,7 @@ import "./main.css";
 import ThemeToggle from './ThemeToggle';
 import ToggleButton from './ToggleButton';
 import DarkMode from "./DarkMode/DarkMode";
+import { Link } from "react-router-dom";
 // import logo from "src/assets/food.jpg"
 
 function Navbar() {
@@ -95,14 +96,14 @@ function Navbar() {
           ))}
         </div>
       )}
-				<button href="/#">Home</button>
-				<button href="/#">About</button>
-				<button href="/#">Analysis</button>
-                <button href="/#">Product Comparison</button>
+				<button href="/#"><Link to='/'>Home</Link></button>
+				<button href="/#"><Link to='/about'>About</Link></button>
+				<button href="/#"><Link to='/analysis'>Analysis</Link></button>
+                <button href="/#"><Link to='/product'>Comparison</Link></button>
                 { isAuthenticated ? (
                 <button onClick={(e) => logout()}>Logout</button>) : (<button onClick={(e) => loginWithRedirect()}>Login</button>)
                 }
-                <button href="/#">Contact Us</button>
+                <button href="/#"><Link to='/contact'>Contact</Link></button>
 				{theme === 'light-theme' ? ( <span role="img" aria-label="light-mode"> ☀️</span>) : (<span role="img" aria-label="dark-mode"> 🌙</span>)}
 				<ToggleButton theme={theme} onToggle={toggleTheme} />
                 {/* <button href="/#"><DarkMode /></button> */}

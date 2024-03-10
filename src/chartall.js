@@ -1,8 +1,14 @@
 // Chart.js
+import { CategoryScale } from 'chart.js';
 import React from 'react';
 import { Bar, Line, Pie, Radar, Doughnut } from 'react-chartjs-2';
+import { Chart } from 'chart.js/auto';
 
-const Chart = () => {
+Chart.register(
+  CategoryScale
+)   
+
+const Chart123 = () => {
   // Sample data for charts
   const barChartData = {
     labels: ['January', 'February', 'March', 'April', 'May'],
@@ -280,4 +286,4 @@ const Chart = () => {
   );
 };
 
-export default Chart;
+export default Chart123;

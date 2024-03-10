@@ -22,15 +22,15 @@ function ContactUs() {
   return (
     <div className=" flex items-center justify-center h-screen mr-4 mt-[-3rem] component_title"
       id="contactUs" >
-      <div className="bg-gray-300 rounded shadow-xl p-10 shadow-xl">
+      <div className="bg-gray-300 rounded shadow-xl p-20 shadow-xl">
         <h1 className="mb-4 text-2xl text-center text-black font-meth">
           Contact Us
         </h1>
         <form ref={form} onSubmit={sendEmail} className="max-w-4xl p-8 mr-[10%] sm:mx-auto">
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-2 ">
             <div className="flex flex-col mb-4">
               <label
-                className="block mb-4 text-sm text-black text-gray-700 font-poppins tracking-widest"
+                className="mb-4 text-sm text-black text-gray-700 font-poppins tracking-widest"
                 htmlFor="name"
               >
                 Name
